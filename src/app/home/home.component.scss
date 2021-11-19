@@ -1,0 +1,51 @@
+@import "../../vars.scss";
+
+.home{
+    height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .info {
+        display: flex;
+        align-items: center;
+        p{
+            padding-left: 1rem;
+        }
+    }
+    
+    h1{
+        padding: 1rem 0;
+        span{
+            font-weight: bold;
+        }
+    }
+    .bottom{
+        align-self: center;
+        text-align: center;
+        width: 100%;
+        i{
+            position: relative;
+            cursor: pointer;
+            animation: bounce 0.9s infinite linear;
+        }
+    }
+}
+
+.icon {
+    height: 3.125rem;
+    width: 3.125rem;
+    display: inline-block;
+}
+
+.down-arrow{
+    background-image: url('../assets/down.svg');
+    height: 70px !important;
+    width: 70px !important;
+}
+
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}

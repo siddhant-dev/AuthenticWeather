@@ -1,0 +1,23 @@
+<div class="home">
+    <section class="top">
+        <section class="info"  *ngIf="locationFlag">
+            <i class="icon night light-rain"></i>
+            <p class="regular">24&deg;C | Haze | Kolkata </p>
+        </section>
+        <h1 *ngIf="!locationFlag">
+            {{message}}
+        </h1>
+        <span class="caption" *ngIf="!locationFlag">You can look outside you window to get more details.</span>
+        <h1 *ngIf="locationFlag">
+            {{message}}
+        </h1>
+        <span class="caption" *ngIf="locationFlag">{{subMessage}}</span>
+    </section>
+    <section class="bottom" *ngIf="locationFlag" >
+        <i class="icon regular down-arrow"></i>
+        <p class="caption">Oh you want more info!</p>
+    </section>
+</div>
+<div id="details"  *ngIf="locationFlag">
+    <app-details></app-details>
+</div>
