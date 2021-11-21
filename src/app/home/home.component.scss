@@ -12,12 +12,9 @@
             padding-left: 1rem;
         }
     }
-    
     h1{
         padding: 1rem 0;
-        span{
-            font-weight: bold;
-        }
+        
     }
     .bottom{
         align-self: center;
@@ -31,6 +28,8 @@
     }
 }
 
+
+
 .icon {
     height: 3.125rem;
     width: 3.125rem;
@@ -38,7 +37,7 @@
 }
 
 .down-arrow{
-    background-image: url('../assets/down.svg');
+    background-image: url('../../assets/down.svg');
     height: 70px !important;
     width: 70px !important;
 }
