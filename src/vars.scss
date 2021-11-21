@@ -9,3 +9,20 @@ $danger: #EB5757;
 $amber: #F2C94C;
 $success: #6FCF97;
 $primary: #2D9CDB;
+
+.gray {
+    color: $gray5;
+}
+
+.danger {
+    color: $danger;
+}
+.primary {
+    color: $primary;
+}
+.amber {
+    color: $amber;
+}
+.primary-light {
+    color: lighten($primary, 10%);
+}

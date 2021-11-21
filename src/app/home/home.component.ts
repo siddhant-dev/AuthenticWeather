@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CurrentWeather } from '../interface';
+import { CurrentWeather, Description } from '../interface';
 import { GeoLocationService } from '../services/geo-location.service';
 import { WeatherService } from '../services/weather.service';
 
@@ -12,12 +12,10 @@ import { WeatherService } from '../services/weather.service';
 export class HomeComponent implements OnInit {
   lat:number = 0;
   long: number = 0;
-  message: string = "";
   locationFlag: boolean = false;
-  subMessage:string = "";
   currentWeather: CurrentWeather = {temp: 0, humidity: 0, description: "", wind: {speed: 0, deg: 0}, cityName: "", forcast: [], main: ""};
   cityName: string = "";
-  weatherIcon: string = "";
+  weatherDescription: Description = {className: "", message: "", part1: "", keyword: "", part2: "", textClass: "", subMessage: ""};
   sunrise:number = 0;
   sunset:number = 0;
   moment: string = "";
@@ -33,8 +31,8 @@ export class HomeComponent implements OnInit {
       this.locationFlag = true;
       this.getWeather();
     }, error => {
-      this.message = "No weather updated for you.";
-      this.subMessage = "Look outside the window to get weather updates";
+      this.weatherDescription.message = "No weather updated for you.";
+      this.weatherDescription.subMessage = "Look outside the window to get weather updates";
     }
     );
     setTimeout(() => {
@@ -65,11 +63,10 @@ export class HomeComponent implements OnInit {
       this.currentWeather.description = data.list[0].weather[0].description;
       this.currentWeather.wind = data.list[0].wind;
       this.currentWeather.main = data.list[0].weather[0].main;
-      this.weatherIcon = this.weather.getWeatherIcon(this.currentWeather.main, this.currentWeather.description);
+      this.weatherDescription = this.weather.getWeatherIcon(this.currentWeather.main, this.currentWeather.description);
       this.sunrise = data.city.sunrise;
       this.sunset = data.city.sunset;
       this.getDayorNight();
-      this.message = `Fucking <span class="bold">love</span> is in the air.`;
     });
   }
 
