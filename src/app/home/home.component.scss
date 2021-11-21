@@ -51,3 +51,84 @@
     70% { top: -0.3em; }
     100% { top: 0; }
 }
+
+.cloudy{
+    background-image: url('../../assets/cloudy.svg');
+    background-size: cover;
+}
+.haze{
+    background-image: url('../../assets/fog_mist.svg');
+    background-size: cover;
+}
+
+.day{
+    &.clear{
+        background-image: url('../../assets/clear_sky.svg');
+        background-size: cover;
+    }
+    &.light-clouds{
+        background-image: url('../../assets/light_clouds.svg');
+        background-size: cover;
+    }
+    &.partial-cloud{
+        background-image: url('../../assets/partial_cloud.svg');
+        background-size: cover;
+    }
+    &.rain{
+        background-image: url('../../assets/rain.svg');
+        background-size: cover;
+    }
+    &.light-rain{
+        background-image: url('../../assets/light_rain.svg');
+        background-size: cover;
+    }
+}
+
+.night{
+    &.clear{
+        background-image: url('../../assets/night_clear.svg');
+        background-size: cover;
+    }
+    &.light-clouds{
+        background-image: url('../../assets/night_light_clouds.svg');
+        background-size: cover;
+    }
+    &.partial-cloud{
+        background-image: url('../../assets/night_partial_cloud.svg');
+        background-size: cover;
+    }
+    &.rain{
+        background-image: url('../../assets/rain.svg');
+        background-size: cover;
+    }
+    &.light-rain{
+        background-image: url('../../assets/night_light_rain.svg');
+        background-size: cover;
+    }
+}
+.snow {
+    background-image: url('../../assets/snow.svg');
+    background-size: cover;
+}
+
+.thuderstrom {
+    background-image: url('../../assets/thuderstrom.svg');
+    background-size: cover;
+}
+
+.gray {
+    color: $gray5;
+}
+
+.danger {
+    color: $danger;
+}
+.primary {
+    color: $primary;
+}
+.amber {
+    color: $amber;
+}
+.primary-light {
+    color: lighten($primary, 10%);
+}
