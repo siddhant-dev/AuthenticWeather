@@ -1,0 +1,15 @@
+.details{
+    height: calc(100vh - 2rem);
+    padding-top: 2rem;
+    .row-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .wind, .humid {
+            h6 {
+                padding-bottom: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
