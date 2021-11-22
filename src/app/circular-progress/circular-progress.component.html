@@ -1,0 +1,10 @@
+<div class="progress" [attr.data-pct]="humidity">
+    <svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <circle class="back" cx="69" cy="69" [attr.r]="radius"  stroke-width="8" />
+            <circle class="bar" cx="69" cy="69"  [style.strokeDasharray]="circumference"
+            [style.strokeDashoffset]="dashoffset"
+            [attr.r]="radius" [style.stroke]="stroke"  stroke-width="8" />
+        </g>
+    </svg>
+</div>
