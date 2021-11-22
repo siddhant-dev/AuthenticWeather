@@ -24,6 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - run: npm install @angular/cli
       - run: npm install
-      - run: npm run build
+      - run: ng build
