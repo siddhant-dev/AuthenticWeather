@@ -25,4 +25,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: npm install -g @angular/cli
       - run: npm install
-      - run: ng build
+      - run: npm build:prod
