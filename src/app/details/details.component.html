@@ -1,12 +1,10 @@
-<div class="details">
-    <section class="row-2">
-        <div class="wind">
-            <h6>Wind</h6>
-            <app-compass [wind]="forcast.wind"></app-compass>
-        </div>
-        <div class="humid">
-            <h6>Humidity</h6>
-            <app-circular-progress [humidity]="forcast.humidity" [stroke]="color"></app-circular-progress>
-        </div>
+<div class="details-page">
+    <section class="row">
+        <h6>Wind</h6>
+        <h6>Humidity</h6>
+    </section>
+    <section class="row">
+        <app-compass [wind]="forcast.wind"></app-compass>
+        <app-circular-progress [value]="forcast.humidity" [stroke]="color" ></app-circular-progress>
     </section>
 </div>

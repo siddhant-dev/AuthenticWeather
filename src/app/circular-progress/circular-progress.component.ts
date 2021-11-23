@@ -8,7 +8,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 export class CircularProgressComponent implements OnInit, OnChanges {
 
   
-  @Input() humidity:any;
+  @Input() value:any;
   @Input() stroke: string = "";
   radius:number = 65;
   circumference = 2 * Math.PI * this.radius;
@@ -17,12 +17,12 @@ export class CircularProgressComponent implements OnInit, OnChanges {
   constructor() {}
 
   ngOnInit() {
-    this.progress(this.humidity);
+    this.progress(this.value);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes['humidity'].currentValue !== changes['humidity'].previousValue){
-      this.progress(changes['humidity'].currentValue);
+    if(changes['value'].currentValue !== changes['value'].previousValue){
+      this.progress(changes['value'].currentValue);
     }
 
   }
