@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   lat:number = 0;
   long: number = 0;
   locationFlag: boolean = false;
-  currentWeather: CurrentWeather = {temp: 0, humidity: 0, description: "", wind: {speed: 0, deg: 0}, cityName: "", forcast: [], main: ""};
+  currentWeather: CurrentWeather = {temp: 0, humidity: 0, description: "", wind: {speed: 0, deg: 0}, cityName: "", list: [], main: ""};
   cityName: string = "";
   weatherDescription: Description = {className: "", message: "", part1: "", keyword: "", part2: "", textClass: "", subMessage: ""};
   sunrise:number = 0;
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     
     this.sub = this.weather.getWeatherInfo(this.lat, this.long).subscribe(data => {
       this.currentWeather.cityName = data.city.name;
-      this.currentWeather.forcast = data.list;
+      this.currentWeather.list = data.list.splice(0,9);
       this.currentWeather.temp = data.list[0].main.temp;
       this.currentWeather.humidity = data.list[0].main.humidity;
       this.currentWeather.description = data.list[0].weather[0].description;

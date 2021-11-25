@@ -6,6 +6,9 @@ import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { CompassComponent } from './compass/compass.component';
 import { CircularProgressComponent } from './circular-progress/circular-progress.component';
+import { TempForcastComponent } from './temp-forcast/temp-forcast.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -13,11 +16,13 @@ import { CircularProgressComponent } from './circular-progress/circular-progress
     DetailsComponent,
     HomeComponent,
     CompassComponent,
-    CircularProgressComponent
+    CircularProgressComponent,
+    TempForcastComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

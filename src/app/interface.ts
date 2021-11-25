@@ -8,7 +8,7 @@ export interface CurrentWeather{
         deg: number;
     }
     cityName: string;
-    forcast: Array<any>;
+    list: Array<any>;
 }
 
 export interface Description {
