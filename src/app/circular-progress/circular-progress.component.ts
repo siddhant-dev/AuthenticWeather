@@ -10,6 +10,7 @@ export class CircularProgressComponent implements OnInit, OnChanges {
   
   @Input() value:any;
   @Input() stroke: string = "";
+  @Input() maxVal?: any;
   radius:number = 65;
   circumference = 2 * Math.PI * this.radius;
   dashoffset: number = 0;
@@ -28,7 +29,13 @@ export class CircularProgressComponent implements OnInit, OnChanges {
   }
 
   private progress(value: number) {
-    const progress = (value) / 100;
+    let progress: number = 0;
+    if(this.maxVal){
+      progress = (value) / this.maxVal;
+    }
+    else {
+      progress = (value) / 100;
+    }
     console.log(value);
     this.dashoffset = this.circumference * (1 - progress);
 

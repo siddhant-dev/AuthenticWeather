@@ -8,6 +8,7 @@ import { CompassComponent } from './compass/compass.component';
 import { CircularProgressComponent } from './circular-progress/circular-progress.component';
 import { TempForcastComponent } from './temp-forcast/temp-forcast.component';
 import { ChartsModule } from 'ng2-charts';
+import { AqiComponent } from './aqi/aqi.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ChartsModule } from 'ng2-charts';
     HomeComponent,
     CompassComponent,
     CircularProgressComponent,
-    TempForcastComponent
+    TempForcastComponent,
+    AqiComponent
   ],
   imports: [
     BrowserModule,

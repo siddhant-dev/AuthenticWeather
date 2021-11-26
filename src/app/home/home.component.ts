@@ -21,23 +21,10 @@ export class HomeComponent implements OnInit {
   moment: string = "";
   sub!: Subscription;
 
-  constructor(private weather: WeatherService, private location: GeoLocationService) {}
+  constructor(private weather: WeatherService) {}
   ngOnInit() {
     this.getCurrentTimeStamp();
-    
-    const locationsSubscription = this.location.getLocation().subscribe(position => {
-      this.lat = position.latitude;
-      this.long = position.longitude;
-      this.locationFlag = true;
-      this.getWeather();
-    }, error => {
-      this.weatherDescription.message = "No weather updated for you.";
-      this.weatherDescription.subMessage = "Look outside the window to get weather updates";
-    }
-    );
-    setTimeout(() => {
-      locationsSubscription.unsubscribe();
-    }, 10000);
+    this.getWeather();
   }
 
   ngOnDestroy() {
@@ -55,7 +42,7 @@ export class HomeComponent implements OnInit {
   async getWeather() {
     console.log(this.lat, this.long);
     
-    this.sub = this.weather.getWeatherInfo(this.lat, this.long).subscribe(data => {
+    this.sub = this.weather.getWeatherInfo().subscribe(data => {
       this.currentWeather.cityName = data.city.name;
       this.currentWeather.list = data.list.splice(0,9);
       this.currentWeather.temp = data.list[0].main.temp;

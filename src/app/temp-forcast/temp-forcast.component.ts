@@ -60,7 +60,14 @@ export class TempForcastComponent implements OnInit, OnChanges {
     list.forEach(x => {
       temp.push(Math.round(x.main.temp));
       let d = new Date(x.dt*1000);
-      time.push(`${d.getHours()}hrs`);
+      let t = d.getHours();
+      if(t>12) {
+        time.push(`${t-12}pm`);
+      }else if(t<12){
+        time.push(`${t}am`)
+      }
+      else 
+        time.push(`${t} pm`);
     });
     temp.push(Math.min.apply(null, temp) - 2)
     this.lineChartData = [{data: temp, label: 'Temperature'}];
