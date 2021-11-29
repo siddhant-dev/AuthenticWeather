@@ -11,27 +11,15 @@ import { GeoLocationService } from './geo-location.service';
 export class WeatherService {
 
   apiKey = environment.apiKey;
-  baseURL = "https://api.openweathermap.org/data/2.5/"
+  baseURL = "https://api.openweathermap.org/data/2.5/";
+  lat = sessionStorage.getItem('lat');
+  long = sessionStorage.getItem('long');
 
-  constructor(public http: HttpClient, private geo: GeoLocationService) { 
-    const x = this.geo.getLocation().subscribe({
-      next(pos:any) { 
-        localStorage.setItem('lat', pos.coords.latitude);
-        localStorage.setItem('long', pos.coords.longitude);
-       },
-      error(err) { console.error('something wrong occurred: ' + err); },
-      complete() { console.log('done'); }
-    });
-    setTimeout(() => {
-      x.unsubscribe();
-    }, 10000);
+  constructor(public http: HttpClient) { 
    }
 
   getWeatherInfo(): Observable<any> {
-    const lat = localStorage.getItem('lat');
-    const long = localStorage.getItem('long');
-    
-    return this.http.get(this.baseURL + "forecast?lat=" + lat + "&lon=" + long + "&units=metric&appid="
+    return this.http.get(this.baseURL + "forecast?lat=" + this.lat + "&lon=" + this.long + "&units=metric&appid="
      + this.apiKey).pipe(map((weather:any) => {
       return weather;
     }));
