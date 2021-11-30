@@ -1,15 +1,16 @@
 <div class="container">
-    <ul>
-        <li>
+    <h6 tabindex="0">Air Quaility</h6>
+    <ul role="list">
+        <li *ngFor='let i of aqi; let index = index' tabindex="0" [attr.aria-setsize]="aqi.length" role="listitem" [attr.aria-posinset]="index+1">
             <div class="scale-down">
-                <app-circular-progress value="238" maxVal="400" stroke="red"></app-circular-progress>
+                <app-circular-progress [value]="i.value" [maxVal]="i.maxVal" [stroke]="i.strokeColor"></app-circular-progress>
             </div>
            <div class="text">
                 <p class="regular">
-                    PM2.5 (Particulate matter less than 2.5 microns)
+                    {{i.message}}
                 </p>
-                <span class="caption">
-                    Poor | 239μg/m<sup>3</sup>
+                <span class="caption" [style.color]="i.strokeColor">
+                    {{i.concentration}}μg/m<sup>3</sup>
                 </span>
            </div>
         </li>

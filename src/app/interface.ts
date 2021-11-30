@@ -20,3 +20,13 @@ export interface Description {
     textClass: string;
     subMessage: string;
 }
+
+export interface AQI {
+    name: string;
+    concentration: number;
+    value: number;
+    maxVal:number;
+    strokeColor: string;
+    message: string
+    
+}
