@@ -1,14 +1,13 @@
 <div class="details-page">
-    <h6>Temperature through the day</h6>
+    <h6 tabindex="0" aria-label="Temperature through the day">Temperature through the day</h6>
     <app-temp-forcast [list]="forcast.list"></app-temp-forcast>
     <section class="row">
-        <h6>Wind</h6>
-        <h6>Humidity</h6>
+        <h6 tabindex="0">Wind</h6>
+        <h6 tabindex="0">Humidity</h6>
     </section>
     <section class="row">
         <app-compass [wind]="forcast.wind"></app-compass>
         <app-circular-progress [value]="forcast.humidity" [stroke]="color" ></app-circular-progress>
     </section>
-    <h6>Air Quaility</h6>
     <app-aqi></app-aqi>
 </div>

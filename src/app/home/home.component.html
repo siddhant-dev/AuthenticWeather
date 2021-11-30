@@ -2,19 +2,19 @@
     <section class="top">
         <section class="info" *ngIf="locationFlag">
             <i class="icon" [ngClass]="[moment, weatherDescription.className]"></i>
-            <p class="regular">
+            <p tabindex="0" class="regular">
                 {{currentWeather.temp | number: '1.0-0'}}&deg;C | {{currentWeather.description | titlecase}} |
                 {{currentWeather.cityName}}
             </p>
         </section>
-        <h1> {{weatherDescription.part1}}
+        <h1 tabindex="0" [attr.aria-label]="weatherDescription.message"> {{weatherDescription.part1}}
             <span [ngClass]="weatherDescription.textClass">{{weatherDescription.keyword}}</span>
             {{weatherDescription.part2}}
         </h1>
-        <span class="caption" [innerHTML]="weatherDescription.subMessage"></span>
+        <span class="caption" tabindex="0" [innerHTML]="weatherDescription.subMessage"></span>
     </section>
     <section class="bottom" *ngIf="locationFlag">
-        <a href="#details"><i class="icon regular down-arrow"></i></a>
+        <a href="#details" role="button" aria-label="Button to scroll down for details"><i class="icon regular down-arrow"></i></a>
         <p class="caption">Oh you want more info!</p>
     </section>
 </div>
