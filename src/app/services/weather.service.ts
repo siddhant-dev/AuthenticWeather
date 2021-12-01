@@ -12,14 +12,15 @@ export class WeatherService {
 
   apiKey = environment.apiKey;
   baseURL = "https://api.openweathermap.org/data/2.5/";
-  lat = sessionStorage.getItem('lat');
-  long = sessionStorage.getItem('long');
+  
 
   constructor(public http: HttpClient) { 
    }
 
   getWeatherInfo(): Observable<any> {
-    return this.http.get(this.baseURL + "forecast?lat=" + this.lat + "&lon=" + this.long + "&units=metric&appid="
+    const lat = sessionStorage.getItem('lat');
+    const long = sessionStorage.getItem('long');
+    return this.http.get(this.baseURL + "forecast?lat=" + lat + "&lon=" + long + "&units=metric&appid="
      + this.apiKey).pipe(map((weather:any) => {
       return weather;
     }));

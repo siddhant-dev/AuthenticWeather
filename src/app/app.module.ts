@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CompassComponent } from './compass/compass.component';
 import { CircularProgressComponent } from './circular-progress/circular-progress.component';
 import { TempForcastComponent } from './temp-forcast/temp-forcast.component';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { AqiComponent } from './aqi/aqi.component';
 
 
@@ -24,7 +24,7 @@ import { AqiComponent } from './aqi/aqi.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ChartsModule
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
