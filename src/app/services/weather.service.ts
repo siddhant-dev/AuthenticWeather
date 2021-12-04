@@ -45,7 +45,7 @@ export class WeatherService {
       d.subMessage = "Chances of very light rain"
       d.part1 = "It's fucking"
       d.keyword = "raining."
-      d.part2 = "outside";
+      d.part2 = "";
       d.textClass = "primary";
       return d;
     }
@@ -54,7 +54,7 @@ export class WeatherService {
       d.message = "It's fucking cold outside. Like a freezer"
       d.subMessage = "It's cold and snowing."
       d.part1 = "It's fucking"
-      d.keyword = "cold."
+      d.keyword = "cold"
       d.part2 = "outside. Like a freezer";
       d.textClass = "pimary-light";
       return d;
@@ -76,7 +76,7 @@ export class WeatherService {
         d.subMessage = "Chances of very light rain"
         d.part1 = "It's fucking"
         d.keyword = "raining."
-        d.part2 = "outside";
+        d.part2 = "";
         d.textClass = "primary";
         return d;
       }
@@ -86,7 +86,7 @@ export class WeatherService {
         d.subMessage = "Chances of rain."
         d.part1 = "It's fucking"
         d.keyword = "raining."
-        d.part2 = "outside";
+        d.part2 = "";
         d.textClass = "primary";
         return d;
       }
@@ -128,7 +128,7 @@ export class WeatherService {
       d.message = "Fucking pollution everywhere."
       d.subMessage = "Pollution has impacted the weather and it might be difficult breathe."
       d.part1 = "Fucking"
-      d.keyword = "pollution."
+      d.keyword = "pollution"
       d.part2 = "everywhere.";
       d.textClass = "danger";
       return d;
