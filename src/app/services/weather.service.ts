@@ -113,7 +113,7 @@ export class WeatherService {
         return d;
       }
       else {
-        d.className = "clouds";
+        d.className = "cloudy";
         d.message = "It's just fucking grey."
         d.subMessage = "Very little to no natural light, cloudy weather."
         d.part1 = "It's just fucking"
