@@ -61,7 +61,9 @@ export class TempForcastComponent implements OnInit, OnChanges {
       else
         time.push(`${t} pm`);
     });
-    temp.push(Math.min.apply(null, temp) - 2)
+    temp.push(Math.min.apply(null, temp) - 2);
+    temp.push(Math.max.apply(null, temp) + 1);  
+    console.log(temp);
     this.lineChartData = {
       datasets: [{
         data: temp, label: 'Temperature', 
