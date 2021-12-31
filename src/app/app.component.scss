@@ -2,3 +2,12 @@ main{
     margin:1rem;
 }
 
+@media only screen 
+  and (min-device-width: 800px)
+  and (max-device-width: 1600px) {
+      main {
+          width: calc(100% / 3);
+          padding: 0 32%;
+      }
+
+  }
