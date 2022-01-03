@@ -9,6 +9,8 @@ import { CircularProgressComponent } from './circular-progress/circular-progress
 import { TempForcastComponent } from './temp-forcast/temp-forcast.component';
 import { NgChartsModule } from 'ng2-charts';
 import { AqiComponent } from './aqi/aqi.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DesignInspirationComponent } from './design-inspiration/design-inspiration.component';
 
 
 @NgModule({
@@ -19,12 +21,14 @@ import { AqiComponent } from './aqi/aqi.component';
     CompassComponent,
     CircularProgressComponent,
     TempForcastComponent,
-    AqiComponent
+    AqiComponent,
+    DesignInspirationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

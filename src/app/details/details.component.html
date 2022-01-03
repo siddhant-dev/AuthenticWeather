@@ -8,8 +8,13 @@
         </section>
         <section class="col">
             <h6 tabindex="0">Humidity</h6>
-            <app-circular-progress [value]="forcast.humidity" [stroke]="color" ></app-circular-progress>
+            <app-circular-progress [value]="forcast.humidity" [stroke]="color"></app-circular-progress>
         </section>
     </div>
     <app-aqi></app-aqi>
+    <footer>
+        <a class="caption" routerLink='/design'>Design Inspiration</a> 
+        <a class="caption" href="https://openweathermap.org/" target="blank">Weather Data from Open Weather</a>
+        <a class="caption" href="https://github.com/siddhant-dev" target="blank">Created By Siddhant</a>
+    </footer>
 </div>

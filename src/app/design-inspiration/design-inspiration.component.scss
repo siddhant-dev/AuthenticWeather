@@ -1,0 +1,32 @@
+@import '../../vars.scss';
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+}
+
+.close {
+    background-image: url('../../assets/close.svg');
+    background-repeat: no-repeat;
+
+}
+
+header {
+    padding: 1rem 1rem;
+}
+
+.content {
+    padding: .875rem 0rem;
+    text-align: center;
+    h6{
+        padding-top: 2rem;
+    }
+    p {
+        text-align: justify;
+        padding-top: 2rem;
+    }
+    a {
+        color: $primary;
+    }
+}

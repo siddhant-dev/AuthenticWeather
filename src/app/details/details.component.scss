@@ -1,3 +1,5 @@
+@import "../../vars.scss";
+
 .details-page{
     padding: 1rem 0;
     height: calc(100vh - 2rem);
@@ -21,5 +23,17 @@
     }
     h6 {
         padding: .5rem 0;
+    }
+    footer {
+        background-color: lighten($color: $black, $amount: 5);
+        padding: 2rem 1rem;
+        display: flex;
+        gap: 2rem;
+        border-radius: .25rem;
+        text-align: center;
+        margin: 0 -1rem;
+        a {
+            color: $white;
+        }
     }
 }
