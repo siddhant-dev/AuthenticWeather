@@ -1,17 +1,39 @@
+@import "../../vars.scss";
+
 .details-page{
     padding: 1rem 0;
     height: calc(100vh - 2rem);
     .row {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         gap: 0 2rem;
-        & > *{
-            width: 100%;
-            text-align: center;
+        .col {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            gap: 2rem 0;
+            & > *{
+                width: 100%;
+                text-align: center;
+            }
+            app-compass {
+                margin-top: -1.5rem;
+            }
         }
     }
     h6 {
         padding: .5rem 0;
+    }
+    footer {
+        background-color: lighten($color: $black, $amount: 5);
+        padding: 2rem 1rem;
+        display: flex;
+        gap: 2rem;
+        border-radius: .25rem;
+        text-align: center;
+        margin: 0 -1rem;
+        a {
+            color: $white;
+        }
     }
 }

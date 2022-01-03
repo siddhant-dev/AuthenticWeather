@@ -5,7 +5,7 @@
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 96px;
+  font-size: 90px;
   letter-spacing: -1.5px;
   
 }
@@ -106,8 +106,26 @@ body {
   background-color: $black;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 h1,h2,h3,h4,h5,h6,.regular,.body,.caption,.overline,.btn,.sub,.sub2 {
     margin: 0
+}
+
+.gray {
+  color: $gray4;
+}
+
+.danger {
+  color: $danger;
+}
+.primary {
+  color: $primary;
+}
+.amber {
+  color: $amber;
+}
+.primary-light {
+  color: lighten($primary, 10%);
 }
