@@ -1,5 +1,5 @@
 main{
-    margin:1rem;
+    padding:1rem;
 }
 
 @media only screen 
@@ -7,7 +7,7 @@ main{
   and (max-device-width: 1600px) {
       main {
           width: calc(100% / 3);
-          padding: 0 32%;
+          margin: 0 32%;
       }
 
   }
