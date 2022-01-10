@@ -45,7 +45,7 @@ export class AqiService {
     } else if (conc >= 350.5 && conc < 500.5) {
       val = this.linear(500, 401, 500.4, 350.5, conc);
     } else {
-      val = 501;
+      val = 500;
     }
     let col: string = '#6FCF97';
     if(val<61) {
@@ -83,7 +83,7 @@ export class AqiService {
     } else if (conc >= 505 && conc < 605) {
       val = this.linear(500, 401, 604, 505, conc);
     } else {
-      val = 501;
+      val = 500;
     }
     let col:string = '#6FCF97';
     if(val<101) {
